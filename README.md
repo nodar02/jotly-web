@@ -2,12 +2,13 @@
 
 Landing page for **Jotly** — quick expense tracker for iPhone — at [jotly.info](https://jotly.info).
 
-Plain static site, no build step:
+Plain static site, no build step. Pages: home (`index.html`), `privacy.html`, `terms.html`, `contact.html`.
 
 ```
 index.html      page markup (sections + app screen mockups)
 css/styles.css  design tokens and styles
-js/main.js      EN/RU language switch, interactive quick-jot demo, screen charts
+js/contact.js   contact form (opens the visitor's email app)
+js/main.js      EN/RU/ES language switch, interactive quick-jot demo, screen charts
 favicon.ico     browser tab icon (16/32/48)
 icons/          PNG tab icons, Apple touch icon, 192/512 icons
 site.webmanifest
