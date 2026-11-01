@@ -8,7 +8,9 @@ Plain static site, no build step:
 index.html      page markup (sections + app screen mockups)
 css/styles.css  design tokens and styles
 js/main.js      EN/RU language switch, interactive quick-jot demo, screen charts
-favicon.svg
+favicon.ico     browser tab icon (16/32/48)
+icons/          PNG tab icons, Apple touch icon, 192/512 icons
+site.webmanifest
 ```
 
 ## Run locally
