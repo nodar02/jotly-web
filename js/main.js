@@ -34,7 +34,7 @@
       'faq.1.q': 'Does Jotly connect to my bank?', 'faq.1.a': 'No. You jot what you spend, so nothing needs your bank login. Automatic jots from Apple Wallet payments are coming soon.',
       'faq.2.q': 'Where is my data stored?', 'faq.2.a': 'On your iPhone, synced through your own iCloud account. You can export everything to CSV at any time.',
       'faq.3.q': 'Which currencies does it support?', 'faq.3.a': 'Jot in any currency. Pick a main currency for totals and budgets; each jot keeps its original amount and the rate from that day.',
-      'faq.4.q': 'Is there an Android version?', 'faq.4.a': 'Jotly is iPhone-only for now, in English and Russian.',
+      'faq.4.q': 'Is there an Android version?', 'faq.4.a': 'Jotly is iPhone-only for now, in English, Russian and Spanish.',
       'final.title': 'Your next coffee is a three-second jot.', 'final.cta': 'Get Jotly free',
       'foot.privacy': 'Privacy', 'foot.terms': 'Terms', 'foot.contact': 'Contact',
       'meta.title': 'Jotly — quick expense tracker for iPhone'
@@ -70,7 +70,7 @@
       'faq.1.q': 'Jotly подключается к моему банку?', 'faq.1.a': 'Нет. Вы сами записываете траты, поэтому вход в банк не нужен. Автоматические записи из платежей Apple Wallet скоро появятся.',
       'faq.2.q': 'Где хранятся мои данные?', 'faq.2.a': 'На вашем iPhone, с синхронизацией через ваш аккаунт iCloud. Всё можно в любой момент выгрузить в CSV.',
       'faq.3.q': 'Какие валюты поддерживаются?', 'faq.3.a': 'Любые. Выберите основную валюту для итогов и бюджетов; каждая запись сохраняет исходную сумму и курс того дня.',
-      'faq.4.q': 'Есть версия для Android?', 'faq.4.a': 'Пока Jotly только для iPhone, на английском и русском.',
+      'faq.4.q': 'Есть версия для Android?', 'faq.4.a': 'Пока Jotly только для iPhone, на английском, русском и испанском.',
       'final.title': 'Следующий кофе — запись за три секунды.', 'final.cta': 'Попробовать Jotly',
       'foot.privacy': 'Конфиденциальность', 'foot.terms': 'Условия', 'foot.contact': 'Контакты',
       'meta.title': 'Jotly — быстрый учёт расходов для iPhone'
@@ -106,7 +106,7 @@
       'faq.1.q': '¿Jotly se conecta a mi banco?', 'faq.1.a': 'No. Tú anotas lo que gastas, así que no hace falta acceder a tu banco. Pronto llegarán las anotaciones automáticas de pagos con Apple Wallet.',
       'faq.2.q': '¿Dónde se guardan mis datos?', 'faq.2.a': 'En tu iPhone, sincronizados con tu propia cuenta de iCloud. Puedes exportarlo todo a CSV cuando quieras.',
       'faq.3.q': '¿Qué monedas admite?', 'faq.3.a': 'Cualquiera. Elige una moneda principal para totales y presupuestos; cada anotación conserva su importe original y el tipo de cambio de ese día.',
-      'faq.4.q': '¿Hay versión para Android?', 'faq.4.a': 'Por ahora Jotly es solo para iPhone.',
+      'faq.4.q': '¿Hay versión para Android?', 'faq.4.a': 'Por ahora Jotly es solo para iPhone, en inglés, ruso y español.',
       'final.title': 'Tu próximo café es una anotación de tres segundos.', 'final.cta': 'Prueba Jotly gratis',
       'foot.privacy': 'Privacidad', 'foot.terms': 'Términos', 'foot.contact': 'Contacto',
       'meta.title': 'Jotly — control de gastos rápido para iPhone'
