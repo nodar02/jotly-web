@@ -171,7 +171,7 @@
   /* ───────── Quick jot (interactive hero demo) ───────── */
   var jot = document.getElementById('quickjot');
   if (jot) {
-    var state = { amount: '12500', cat: 'food', cur: 'AMD', saved: false };
+    var state = { amount: '4.80', cat: 'food', cur: 'USD', saved: false };
     var CATS = [
       ['housing', 'Housing', '#121212'], ['food', 'Food', '#D4F25A'], ['groceries', 'Groceries', '#B8A6FF'],
       ['utilities', 'Utilities', '#FF8A5B'], ['transport', 'Transport', '#7FC8F8'], ['shopping', 'Shopping', '#F5B8D8'],
