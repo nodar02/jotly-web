@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jotly — quick expense tracker for iPhone</title>
+<meta name="description" content="Jotly logs an expense in about three seconds. Double-tap the back of your iPhone, type the amount, pick a category. Multi-currency, budgets and insights.">
+<meta name="theme-color" content="#F2F2EE">
+<meta property="og:title" content="Jotly — Double-tap. Jot. Done.">
+<meta property="og:description" content="Log an expense in about three seconds on iPhone. Multi-currency, budgets and insights.">
+<meta property="og:url" content="https://jotly.info/">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header wrap">
+  <a href="#top" class="logo" aria-label="Jotly home">jotly<span class="logo-dot"></span></a>
+  <nav aria-label="Main" class="main-nav">
+    <a href="#how" data-i18n="nav.how">How it works</a>
+    <a href="#features" data-i18n="nav.features">Features</a>
+    <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+  </nav>
+  <div class="header-actions">
+    <div role="group" aria-label="Language" class="lang">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <a href="#pricing" class="btn btn-dark btn-sm" data-i18n="nav.cta">Get the app</a>
+  </div>
+</header>
+
+<main>
+
+<section id="top" class="hero wrap">
+  <div class="hero-copy">
+    <span class="pill"><span class="pill-dot"></span><span data-i18n="hero.badge">Expense tracker for iPhone</span></span>
+    <h1 class="hero-title" data-i18n-html="hero.title">Double-tap.<br>Jot. <mark>Done.</mark></h1>
+    <p class="hero-lede" data-i18n="hero.lede">Jotly logs an expense in about three seconds — tap the back of your iPhone, type the amount, pick a category. See where every dram, dollar and euro went.</p>
+    <div class="hero-ctas">
+      <a href="#pricing" class="btn btn-dark btn-lg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+        <span data-i18n="hero.cta">Start free month</span>
+      </a>
+      <a href="#how" class="btn btn-outline btn-lg" data-i18n="hero.cta2">See how it works</a>
+    </div>
+    <span class="fine" data-i18n="hero.fine">iPhone · 1 month free, then $4.90/month</span>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-blob" aria-hidden="true"></div>
+    <div class="phone phone-lg">
+      <div class="phone-screen">
+        <div class="screen-scale">
+          <!-- Quick jot screen (interactive demo) -->
+          <div class="scr scr-jot" id="quickjot">
+            <header class="jot-head">
+              <span class="circ-btn" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+              <span class="jot-title">New jot</span>
+              <span class="soft-chip">Main card<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+            </header>
+            <div class="jot-amount-wrap">
+              <div class="jot-amount" aria-live="polite">
+                <span class="jot-sym" data-jot="sym">֏</span>
+                <span class="jot-num" data-jot="amount">12,500</span>
+                <span class="jot-caret" aria-hidden="true"></span>
+              </div>
+              <div class="jot-conv" data-jot="conv"></div>
+              <div role="group" aria-label="Currency" class="jot-curs" data-jot="curs"></div>
+            </div>
+            <div class="jot-note">
+              <label for="jot-note">What was it?</label>
+              <input id="jot-note" type="text" placeholder="Coffee, taxi, groceries…" autocomplete="off">
+            </div>
+            <div role="group" aria-label="Category" class="jot-cats" data-jot="cats"></div>
+            <div class="spacer"></div>
+            <div class="jot-keys" data-jot="keys"></div>
+            <button type="button" class="jot-save" data-jot="save">Save to Food</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="band-white">
+  <div class="wrap section stack-48">
+    <div class="section-head">
+      <span class="kicker" data-i18n="how.kicker">How it works</span>
+      <h2 data-i18n="how.title">Faster than forgetting.</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num">1</span>
+        <h3 data-i18n="how.s1.t">Turn on Back Tap</h3>
+        <p data-i18n="how.s1.p">A one-minute setup in Jotly links a double-tap on the back of your iPhone to a new jot.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <h3 data-i18n="how.s2.t">Tap at the till</h3>
+        <p data-i18n="how.s2.p">Paid for coffee? Double-tap — the jot sheet opens over whatever you were doing, even from the lock screen.</p>
+      </li>
+      <li class="step step-lime">
+        <span class="step-num">3</span>
+        <h3 data-i18n="how.s3.t">Amount, category, done</h3>
+        <p data-i18n="how.s3.p">Type the amount in any currency, tap a category, save. About three seconds, start to finish.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="features" class="wrap section stack-48">
+  <div class="features-head">
+    <h2 data-i18n="feat.title">Everything you need to know where it went.</h2>
+    <p data-i18n="feat.lede">No bank logins, no spreadsheets. Just your jots, turned into clear numbers.</p>
+  </div>
+  <div class="features">
+    <article class="feature">
+      <span class="feat-icon" style="--c:var(--lime)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></span>
+      <h3 data-i18n="feat.1.t">Three-second jots</h3>
+      <p data-i18n="feat.1.p">One sheet for amount, note and category. Your default account and category are already picked.</p>
+    </article>
+    <article class="feature">
+      <span class="feat-icon feat-icon-text" style="--c:var(--violet)">֏$</span>
+      <h3 data-i18n="feat.2.t">Every currency</h3>
+      <p data-i18n="feat.2.p">Jot in dram, dollars, euros or rubles. Totals convert to your main currency at that day's rate.</p>
+    </article>
+    <article class="feature">
+      <span class="feat-icon" style="--c:var(--orange)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18M16 15h2"/></svg></span>
+      <h3 data-i18n="feat.3.t">Budgets that nudge</h3>
+      <p data-i18n="feat.3.p">Set a monthly budget and per-category limits. See what's left per day, and which category ran over.</p>
+    </article>
+    <article class="feature">
+      <span class="feat-icon" style="--c:var(--sky)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-8M12 20V5M19 20v-11"/></svg></span>
+      <h3 data-i18n="feat.4.t">Insights, not homework</h3>
+      <p data-i18n="feat.4.p">Income versus spending by month, what you kept, and plain-language notes on what changed.</p>
+    </article>
+    <article class="feature">
+      <span class="feat-icon" style="--c:var(--ink)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4F25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+      <h3 data-i18n="feat.5.t">Private by default</h3>
+      <p data-i18n="feat.5.p">Your jots live on your iPhone and sync through your own iCloud. Lock the app with Face ID.</p>
+    </article>
+    <article class="feature">
+      <span class="feat-icon" style="--c:var(--pink)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+      <h3 data-i18n="feat.6.t">Light and dark</h3>
+      <p data-i18n="feat.6.p">Follows your iPhone's appearance, in English or Russian.</p>
+    </article>
+  </div>
+</section>
+
+<section aria-label="App screens" class="band-dark">
+  <div class="wrap section screens-section">
+    <div class="center-head">
+      <h2 data-i18n-html="screens.title">See where it <span class="lime-text">went.</span></h2>
+      <p data-i18n="screens.lede">Activity, category split and monthly insights — all from the jots you already made.</p>
+    </div>
+    <div class="screens">
+
+      <!-- Activity -->
+      <div class="phone phone-sm"><div class="phone-screen"><div class="screen-scale">
+        <div class="scr scr-tab">
+          <header class="tab-head">
+            <div class="logo logo-app">jotly<span class="logo-dot"></span></div>
+            <span class="avatar">AM</span>
+          </header>
+          <section class="act-top">
+            <span class="month-btn">September<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="big-num">$9,512</div>
+            <div class="delta-line"><span class="delta"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>22%</span>spent vs August</div>
+          </section>
+          <section class="card-white daily">
+            <div class="row-between muted-13"><span>Daily</span><span>avg $317 / day</span></div>
+            <div class="bars" id="daily-bars"><div class="bars-avg"></div></div>
+            <div class="row-between bar-axis"><span>1</span><span>8</span><span>15</span><span>22</span><span>30</span></div>
+          </section>
+          <div class="chips">
+            <span class="chip chip-on">Expenses</span><span class="chip">Monthly</span><span class="chip">All accounts</span>
+          </div>
+          <section class="tx-list">
+            <div class="row-between tx-day"><span>Today</span><span>$58</span></div>
+            <div class="tx">
+              <div class="tx-icon" style="background:#B8A6FF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></div>
+              <div class="tx-main"><span class="tx-name">MagSafe charger</span><span class="tx-meta">Shopping · 18:42</span></div>
+              <span class="tx-amt">$58</span>
+            </div>
+            <div class="row-between tx-day tx-day-gap"><span>Friday</span><span>$461</span></div>
+            <div class="tx">
+              <div class="tx-icon" style="background:#FF8A5B"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></div>
+              <div class="tx-main"><span class="tx-name">Electricity bill</span><span class="tx-meta">Utilities · 09:10</span></div>
+              <span class="tx-amt-wrap"><span class="tx-amt">֏118,000</span><span class="tx-conv">≈ $305</span></span>
+            </div>
+            <div class="tx">
+              <div class="tx-icon" style="background:#D4F25A"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 13v8M17 3c-2 0-3 2-3 5s1 4 3 4v9"/></svg></div>
+              <div class="tx-main"><span class="tx-name">Dinner out</span><span class="tx-meta">Food · 20:15</span></div>
+              <span class="tx-amt">$132</span>
+            </div>
+          </section>
+          <div class="fade" aria-hidden="true"></div>
+          <div class="tabbar" data-active="activity" aria-hidden="true"></div>
+        </div>
+      </div></div></div>
+
+      <!-- Summary -->
+      <div class="phone phone-sm"><div class="phone-screen"><div class="screen-scale">
+        <div class="scr scr-tab">
+          <header class="tab-head">
+            <span class="scr-h1">Where it went</span>
+            <span class="soft-chip soft-chip-sm">Sep<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+          </header>
+          <section class="card-dark sum-card">
+            <div class="row-between baseline">
+              <span class="dark-num">$9,512</span>
+              <span class="grey-13">83 jots</span>
+            </div>
+            <div class="split" id="sum-split"></div>
+            <div class="row-between grey-12 split-foot"><span>Housing is 45% of September</span><span>↑ $1,715</span></div>
+          </section>
+          <div class="chips">
+            <span class="chip chip-on">Expenses</span><span class="chip">Income</span><span class="chip">All accounts</span>
+          </div>
+          <ul class="cat-list" id="sum-list"></ul>
+          <div class="fade fade-130" aria-hidden="true"></div>
+          <div class="tabbar" data-active="summary" aria-hidden="true"></div>
+        </div>
+      </div></div></div>
+
+      <!-- Insights -->
+      <div class="phone phone-sm"><div class="phone-screen"><div class="screen-scale">
+        <div class="scr scr-tab" id="insights">
+          <header class="tab-head">
+            <span class="scr-h1">Insights</span>
+            <span class="soft-chip soft-chip-sm">6 months<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+          </header>
+          <section class="card-dark ins-card">
+            <div class="ins-totals">
+              <div class="ins-total"><span class="grey-13 legend"><span class="sw" style="background:#F2F2EE"></span>Income · <span data-ins="name">Sep</span></span><span class="ins-num" data-ins="inc">$22,600</span></div>
+              <div class="ins-total"><span class="grey-13 legend"><span class="sw" style="background:#D4F25A"></span>Spent · <span data-ins="name">Sep</span></span><span class="ins-num lime-text" data-ins="exp">$9,512</span></div>
+            </div>
+            <div class="ins-months" data-ins="months"></div>
+          </section>
+          <section class="card-white left-card">
+            <div class="row-between baseline"><span class="muted-13 bold">Income left</span><span class="muted-12">avg $9,820</span></div>
+            <div class="left-line"><span class="left-num" data-ins="left">$13,088</span><span class="muted-13"><span data-ins="rate">58%</span> of income kept</span></div>
+            <div class="left-bars" data-ins="leftbars"><div class="left-avg" data-ins="avg"></div></div>
+          </section>
+          <div class="ins-note">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 13v8M17 3c-2 0-3 2-3 5s1 4 3 4v9"/></svg>
+            <span>Food is up 18% on August — mostly dinners out on Fridays.</span>
+          </div>
+          <div class="fade fade-120" aria-hidden="true"></div>
+          <div class="tabbar" data-active="insights" aria-hidden="true"></div>
+        </div>
+      </div></div></div>
+
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="wrap section pricing">
+  <div class="pricing-copy">
+    <span class="kicker" data-i18n="price.kicker">Pricing</span>
+    <h2 data-i18n="price.title">One plan. First month on us.</h2>
+    <p data-i18n="price.lede">Try everything free for a month. Keep going for less than one coffee — cancel anytime in your App Store settings.</p>
+  </div>
+  <div class="price-card">
+    <div class="row-between center">
+      <span class="price-name">Jotly</span>
+      <span class="lime-badge" data-i18n="price.badge">1 month free</span>
+    </div>
+    <div class="price"><span class="price-num">$4.90</span><span class="price-per" data-i18n="price.per">/ month</span></div>
+    <ul class="checks">
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4F25A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-i18n="price.f1">Unlimited jots and accounts</span></li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4F25A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-i18n="price.f2">Back Tap quick jot</span></li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4F25A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-i18n="price.f3">Multi-currency with daily rates</span></li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4F25A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-i18n="price.f4">Budgets, insights and CSV export</span></li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4F25A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-i18n="price.f5">iCloud sync across your devices</span></li>
+    </ul>
+    <a href="#top" class="btn btn-lime btn-lg btn-block" data-i18n="price.cta">Start free month</a>
+  </div>
+</section>
+
+<section id="faq" class="band-white">
+  <div class="wrap-narrow section faq">
+    <h2 data-i18n="faq.title">Questions</h2>
+    <div class="faq-list">
+      <details><summary data-i18n="faq.1.q">Does Jotly connect to my bank?</summary><p data-i18n="faq.1.a">No. You jot what you spend, so nothing needs your bank login. Automatic jots from Apple Wallet payments are coming soon.</p></details>
+      <details><summary data-i18n="faq.2.q">Where is my data stored?</summary><p data-i18n="faq.2.a">On your iPhone, synced through your own iCloud account. You can export everything to CSV at any time.</p></details>
+      <details><summary data-i18n="faq.3.q">Which currencies does it support?</summary><p data-i18n="faq.3.a">Jot in any currency. Pick a main currency for totals and budgets; each jot keeps its original amount and the rate from that day.</p></details>
+      <details><summary data-i18n="faq.4.q">Is there an Android version?</summary><p data-i18n="faq.4.a">Jotly is iPhone-only for now, in English and Russian.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="final-cta">
+    <h2 data-i18n="final.title">Your next coffee is a three-second jot.</h2>
+    <a href="#pricing" class="btn btn-dark btn-xl" data-i18n="final.cta">Get Jotly free</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer wrap">
+  <div class="footer-brand">
+    <span class="logo logo-sm">jotly<span class="logo-dot"></span></span>
+    <span class="muted-14">© 2026 Jotly · jotly.info</span>
+  </div>
+  <nav aria-label="Footer" class="footer-nav">
+    <a href="#top" data-i18n="foot.privacy">Privacy</a>
+    <a href="#top" data-i18n="foot.terms">Terms</a>
+    <a href="#top" data-i18n="foot.contact">Contact</a>
+  </nav>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
