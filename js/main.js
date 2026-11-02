@@ -153,18 +153,18 @@
 
   /* ───────── Tab bar (shared by app screens) ───────── */
   var ICONS = {
-    activity: '<path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/>',
-    summary: '<path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
-    budget: '<rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18M16 15h2"/>',
-    insights: '<path d="M5 20v-8M12 20V5M19 20v-11"/>'
+    activity: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>',
+    summary: '<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M11 3.1A9 9 0 1 0 20.9 13H11z"/><path d="M13 1.6V11h9.4A9.4 9.4 0 0 0 13 1.6z"/></svg>',
+    budget: '<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M5.5 5h13a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-13a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3zM2.5 8.6v2h19v-2zM5.5 13.2v2.6h3.6v-2.6z"/></svg>',
+    insights: '<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="11" width="5" height="10" rx="1.6"/><rect x="9.5" y="7" width="5" height="14" rx="1.6"/><rect x="16" y="3" width="5" height="18" rx="1.6"/></svg>'
   };
   function tab(id, label, active) {
-    return '<span class="tab' + (id === active ? ' on' : '') + '"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + ICONS[id] + '</svg>' + label + '</span>';
+    return '<span class="tab' + (id === active ? ' on' : '') + '">' + ICONS[id] + label + '</span>';
   }
   document.querySelectorAll('.tabbar').forEach(function (bar) {
     var a = bar.getAttribute('data-active');
     bar.innerHTML = tab('activity', 'Activity', a) + tab('summary', 'Summary', a) +
-      '<span class="tab-plus"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>' +
+      '<span class="tab-plus"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>' +
       tab('budget', 'Budget', a) + tab('insights', 'Insights', a);
   });
 
@@ -177,7 +177,7 @@
       ['utilities', 'Utilities', '#FF8A5B'], ['transport', 'Transport', '#7FC8F8'], ['shopping', 'Shopping', '#F5B8D8'],
       ['goingout', 'Going out', '#FFD15C'], ['subs', 'Subscriptions', '#9FE0C4']
     ];
-    var RATES = { USD: [1, '$'], AMD: [387, '֏'], EUR: [0.87, '€'], RUB: [80, '₽'], GEL: [2.7, '₾'] };
+    var RATES = { USD: [1, '$'], EUR: [0.87, '€'], GBP: [0.75, '£'], AMD: [387, '֏'] };
     var q = function (k) { return jot.querySelector('[data-jot="' + k + '"]'); };
     var curWrap = q('curs'), catWrap = q('cats'), keyWrap = q('keys'), saveBtn = q('save');
 
