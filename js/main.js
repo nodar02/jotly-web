@@ -37,7 +37,7 @@
       'faq.4.q': 'Is there an Android version?', 'faq.4.a': 'Jotly is iPhone-only for now, in English, Russian and Spanish.',
       'final.title': 'Your next coffee is a three-second jot.', 'final.cta': 'Get Jotly free',
       'foot.privacy': 'Privacy', 'foot.terms': 'Terms', 'foot.contact': 'Contact',
-      'meta.title': 'Jotly — quick expense tracker for iPhone'
+      'meta.title': 'Jotly — Quick Expense Tracker for iPhone'
     },
     ru: {
       'nav.how': 'Как это работает', 'nav.features': 'Возможности', 'nav.pricing': 'Цена', 'nav.faq': 'Вопросы', 'nav.cta': 'Скачать',

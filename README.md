@@ -10,8 +10,9 @@ css/styles.css  design tokens and styles
 js/contact.js   contact form (opens the visitor's email app)
 js/main.js      EN/RU/ES language switch, interactive quick-jot demo, screen charts
 favicon.ico     browser tab icon (16/32/48)
-icons/          PNG tab icons, Apple touch icon, 192/512 icons
+icons/          tab icons, Apple touch icon, 192/512 icons, og-image.png (link previews)
 site.webmanifest
+robots.txt / sitemap.xml   for search engines
 ```
 
 ## Run locally

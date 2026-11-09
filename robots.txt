@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jotly.info/sitemap.xml
