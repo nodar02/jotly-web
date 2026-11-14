@@ -6,8 +6,8 @@
     en: {
       'nav.how': 'How it works', 'nav.features': 'Features', 'nav.pricing': 'Pricing', 'nav.faq': 'FAQ', 'nav.cta': 'Get the app',
       'hero.badge': 'Expense tracker for iPhone',
-      'hero.title': 'Double-tap.<br>Jot. <mark>Done.</mark>',
-      'hero.lede': 'Jotly logs an expense in about three seconds — tap the back of your iPhone, type the amount, pick a category. See where every dram, dollar and euro went.',
+      'hero.title': 'Know where<br>your <mark>money goes.</mark>',
+      'hero.lede': 'Jotly logs an expense in about three seconds — double-tap the back of your iPhone, type the amount, pick a category. Dram, dollars or euros, all in one place.',
       'hero.cta': 'Start free month', 'hero.cta2': 'See how it works',
       'hero.fine': 'iPhone · 1 month free, then $4.90/month',
       'how.kicker': 'How it works', 'how.title': 'Faster than forgetting.',
@@ -42,8 +42,8 @@
     ru: {
       'nav.how': 'Как это работает', 'nav.features': 'Возможности', 'nav.pricing': 'Цена', 'nav.faq': 'Вопросы', 'nav.cta': 'Скачать',
       'hero.badge': 'Учёт расходов для iPhone',
-      'hero.title': 'Двойной тап.<br>Записал. <mark>Готово.</mark>',
-      'hero.lede': 'Jotly записывает расход примерно за три секунды — коснитесь задней панели iPhone, введите сумму, выберите категорию. Видно, куда ушёл каждый драм, доллар и евро.',
+      'hero.title': 'Знайте, куда<br>уходят <mark>ваши деньги.</mark>',
+      'hero.lede': 'Jotly записывает расход примерно за три секунды — дважды коснитесь задней панели iPhone, введите сумму, выберите категорию. Драмы, доллары или евро — всё в одном месте.',
       'hero.cta': 'Месяц бесплатно', 'hero.cta2': 'Как это работает',
       'hero.fine': 'iPhone · месяц бесплатно, затем $4.90 в месяц',
       'how.kicker': 'Как это работает', 'how.title': 'Быстрее, чем забыть.',
@@ -78,8 +78,8 @@
     es: {
       'nav.how': 'Cómo funciona', 'nav.features': 'Funciones', 'nav.pricing': 'Precio', 'nav.faq': 'Preguntas', 'nav.cta': 'Descargar',
       'hero.badge': 'Control de gastos para iPhone',
-      'hero.title': 'Doble toque.<br>Anotado. <mark>Listo.</mark>',
-      'hero.lede': 'Jotly registra un gasto en unos tres segundos: toca la parte trasera de tu iPhone, escribe el importe y elige una categoría. Mira a dónde fue cada dram, dólar y euro.',
+      'hero.title': 'Descubre a dónde<br>va <mark>tu dinero.</mark>',
+      'hero.lede': 'Jotly registra un gasto en unos tres segundos: toca dos veces la parte trasera de tu iPhone, escribe el importe y elige una categoría. Drams, dólares o euros, todo en un solo lugar.',
       'hero.cta': 'Prueba un mes gratis', 'hero.cta2': 'Cómo funciona',
       'hero.fine': 'iPhone · 1 mes gratis, después $4.90 al mes',
       'how.kicker': 'Cómo funciona', 'how.title': 'Más rápido que olvidarlo.',
