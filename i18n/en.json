@@ -45,6 +45,8 @@
   "price.f5": "iCloud sync across your devices",
   "price.cta": "Download app free",
   "faq.title": "Questions",
+  "faq.0.q": "What is Jotly?",
+  "faq.0.a": "Jotly is an expense tracker app for iPhone. It logs a purchase in about three seconds: double-tap the back of your iPhone, type the amount and pick a category. It supports any currency, monthly budgets and spending insights, and keeps your data on your iPhone and in your own iCloud. Jotly is free to download on the App Store.",
   "faq.1.q": "Does Jotly connect to my bank?",
   "faq.1.a": "No. You jot what you spend, so nothing needs your bank login. Automatic jots from Apple Wallet payments are coming soon.",
   "faq.2.q": "Where is my data stored?",

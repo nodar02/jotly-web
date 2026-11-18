@@ -45,6 +45,8 @@
   "price.f5": "Sincronización con iCloud entre tus dispositivos",
   "price.cta": "Descargar gratis",
   "faq.title": "Preguntas",
+  "faq.0.q": "¿Qué es Jotly?",
+  "faq.0.a": "Jotly es una app para controlar gastos en iPhone. Registra una compra en unos tres segundos: toca dos veces la parte trasera de tu iPhone, escribe el importe y elige una categoría. Admite cualquier moneda, presupuestos mensuales y estadísticas de gastos, y guarda tus datos en tu iPhone y en tu propio iCloud. Jotly se puede descargar gratis en la App Store.",
   "faq.1.q": "¿Jotly se conecta a mi banco?",
   "faq.1.a": "No. Tú anotas lo que gastas, así que no hace falta acceder a tu banco. Pronto llegarán las anotaciones automáticas de pagos con Apple Wallet.",
   "faq.2.q": "¿Dónde se guardan mis datos?",

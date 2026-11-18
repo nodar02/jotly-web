@@ -96,6 +96,7 @@ def build(template, lang):
     s = set_attr(s, r'(<link rel="canonical" href=")[^"]*(">)', url(lang))
     s = replace_block(s, '<!-- i18n:alternates -->', '<!-- /i18n:alternates -->', alternates())
     s = replace_block(s, '<!-- i18n:switch -->', '<!-- /i18n:switch -->', lang_switch(lang))
+    s = replace_block(s, '<!-- i18n:faq-schema -->', '<!-- /i18n:faq-schema -->', faq_schema(T))
     extra = ''
     if lang == 'hy':
         extra = ('\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family='
@@ -105,6 +106,23 @@ def build(template, lang):
     if lang != 'en':
         s = relocate(s)
     return s
+
+
+def faq_schema(T):
+    """FAQPage structured data from the visible FAQ, so search engines and AI
+    answers can quote it. Keys faq.N.q / faq.N.a, in order."""
+    items = []
+    n = 0
+    while f'faq.{n}.q' in T or n == 0:
+        if f'faq.{n}.q' in T:
+            items.append({'@type': 'Question',
+                          'name': re.sub('<[^>]+>', '', T[f'faq.{n}.q']),
+                          'acceptedAnswer': {'@type': 'Answer',
+                                             'text': re.sub('<[^>]+>', '', T[f'faq.{n}.a'])}})
+        n += 1
+    data = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': items}
+    return ('\n<script type="application/ld+json">\n'
+            + json.dumps(data, ensure_ascii=False, indent=1) + '\n</script>\n')
 
 
 def sitemap():
