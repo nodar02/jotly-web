@@ -6,10 +6,11 @@
 <title>Jotly — Quick Expense Tracker for iPhone</title>
 <meta name="description" content="Jotly logs an expense in about three seconds. Double-tap the back of your iPhone, type the amount, pick a category. Multi-currency, budgets and insights.">
 <meta name="theme-color" content="#F2F2EE">
-<meta property="og:title" content="Jotly — Know where your money goes">
-<meta property="og:description" content="Log an expense in about three seconds on iPhone. Multi-currency, budgets and insights.">
+<meta property="og:title" content="Jotly — Quick Expense Tracker for iPhone">
+<meta property="og:description" content="Jotly logs an expense in about three seconds. Double-tap the back of your iPhone, type the amount, pick a category. Multi-currency, budgets and insights.">
 <meta property="og:url" content="https://jotly.info/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Jotly">
 <meta property="og:image" content="https://jotly.info/icons/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -18,6 +19,13 @@
 <meta name="twitter:image" content="https://jotly.info/icons/og-image.png">
 <meta name="apple-itunes-app" content="app-id=6829495781">
 <link rel="canonical" href="https://jotly.info/">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://jotly.info/">
+<link rel="alternate" hreflang="ru" href="https://jotly.info/ru/">
+<link rel="alternate" hreflang="es" href="https://jotly.info/es/">
+<link rel="alternate" hreflang="hy" href="https://jotly.info/hy/">
+<link rel="alternate" hreflang="x-default" href="https://jotly.info/">
+<!-- /i18n:alternates -->
 <script type="application/ld+json">
 [
  {
@@ -62,6 +70,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<!-- i18n:fonts --><!-- /i18n:fonts -->
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -75,11 +84,12 @@
     <a href="#faq" data-i18n="nav.faq">FAQ</a>
   </nav>
   <div class="header-actions">
-    <div role="group" aria-label="Language" class="lang">
-      <button type="button" data-lang="en" aria-pressed="true">EN</button>
-      <button type="button" data-lang="ru" aria-pressed="false">RU</button>
-      <button type="button" data-lang="es" aria-pressed="false">ES</button>
-    </div>
+    <nav aria-label="Language" class="lang"><!-- i18n:switch -->
+      <a href="./" hreflang="en" lang="en" title="English" aria-current="page">EN</a>
+      <a href="ru/" hreflang="ru" lang="ru" title="Русский">RU</a>
+      <a href="es/" hreflang="es" lang="es" title="Español">ES</a>
+      <a href="hy/" hreflang="hy" lang="hy" title="Հայերեն">HY</a>
+    <!-- /i18n:switch --></nav>
     <a href="https://apps.apple.com/am/app/jotly-expense-tracker/id6829495781" class="btn btn-dark btn-sm" data-i18n="nav.cta">Get the app</a>
   </div>
 </header>
@@ -196,7 +206,7 @@
     <article class="feature">
       <span class="feat-icon" style="--c:var(--pink)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
       <h3 data-i18n="feat.6.t">Light and dark</h3>
-      <p data-i18n="feat.6.p">Follows your iPhone's appearance, in English, Russian or Spanish.</p>
+      <p data-i18n="feat.6.p">Follows your iPhone's appearance. Available in English, Russian, Spanish, Armenian, Turkish and French.</p>
     </article>
   </div>
 </section>
@@ -339,7 +349,7 @@
       <details><summary data-i18n="faq.1.q">Does Jotly connect to my bank?</summary><p data-i18n="faq.1.a">No. You jot what you spend, so nothing needs your bank login. Automatic jots from Apple Wallet payments are coming soon.</p></details>
       <details><summary data-i18n="faq.2.q">Where is my data stored?</summary><p data-i18n="faq.2.a">On your iPhone, synced through your own iCloud account. You can export everything to CSV at any time.</p></details>
       <details><summary data-i18n="faq.3.q">Which currencies does it support?</summary><p data-i18n="faq.3.a">Jot in any currency. Pick a main currency for totals and budgets; each jot keeps its original amount and the rate from that day.</p></details>
-      <details><summary data-i18n="faq.4.q">Is there an Android version?</summary><p data-i18n="faq.4.a">Jotly is iPhone-only for now, in English, Russian and Spanish.</p></details>
+      <details><summary data-i18n="faq.4.q">Is there an Android version?</summary><p data-i18n="faq.4.a">Jotly is iPhone-only for now. It's available in English, Russian, Spanish, Armenian, Turkish and French.</p></details>
     </div>
   </div>
 </section>

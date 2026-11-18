@@ -71,6 +71,9 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; }
 .lang { display: flex; background: var(--chip-bg); border-radius: 18px; padding: 3px; }
 .lang button { height: 30px; min-width: 40px; border: 0; border-radius: 15px; background: transparent; color: var(--text-3); font-size: 13px; font-weight: 700; cursor: pointer; }
 .lang button[aria-pressed="true"] { background: var(--white); color: var(--ink); }
+.lang a { height: 30px; min-width: 40px; padding: 0 8px; box-sizing: border-box; border-radius: 15px; color: var(--text-3); font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+.lang a:hover { color: var(--ink); }
+.lang a[aria-current="page"] { background: var(--white); color: var(--ink); }
 @media (max-width: 760px) { .main-nav { display: none; } }
 
 /* Hero */
@@ -81,6 +84,9 @@ h3 { margin: 0; font-family: var(--display); font-weight: 700; }
 .hero-title { margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(40px, 5.4vw, 80px); line-height: 1; letter-spacing: -0.04em; }
 html[lang="ru"] .hero-title { font-size: clamp(40px, 5.4vw, 80px); line-height: 1; }
 html[lang="es"] .hero-title { font-size: clamp(40px, 5.4vw, 80px); line-height: 1; }
+html[lang="hy"] .hero-title { font-size: clamp(36px, 4.8vw, 70px); line-height: 1.08; letter-spacing: -0.02em; }
+/* Armenian: the brand fonts have no Armenian letters, so Armenian text uses Noto Sans Armenian. */
+html[lang="hy"] { --display: 'Bricolage Grotesque', 'Noto Sans Armenian', system-ui, sans-serif; --body: 'Instrument Sans', 'Noto Sans Armenian', system-ui, sans-serif; }
 .hero-title mark { background: var(--lime); color: inherit; border-radius: 0.18em; padding: 0 0.12em; white-space: nowrap; }
 .hero-lede { margin: 0; max-width: 520px; font-size: 20px; line-height: 1.5; color: var(--text-2); }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }

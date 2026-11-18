@@ -1,143 +1,16 @@
 (function () {
   'use strict';
 
-  /* ───────── Translations (EN / RU) ───────── */
-  var T = {
-    en: {
-      'nav.how': 'How it works', 'nav.features': 'Features', 'nav.pricing': 'Pricing', 'nav.faq': 'FAQ', 'nav.cta': 'Get the app',
-      'hero.badge': 'Expense tracker for iPhone',
-      'hero.title': 'Know where<br>your <mark>money goes.</mark>',
-      'hero.lede': 'Jotly logs an expense in about three seconds — double-tap the back of your iPhone, type the amount, pick a category. Dram, dollars or euros, all in one place.',
-      'hero.cta': 'Download app free', 'hero.cta2': 'See how it works',
-      'how.kicker': 'How it works', 'how.title': 'Faster than forgetting.',
-      'how.s1.t': 'Turn on Back Tap', 'how.s1.p': 'A one-minute setup in Jotly links a double-tap on the back of your iPhone to a new jot.',
-      'how.s2.t': 'Tap at the till', 'how.s2.p': 'Paid for coffee? Double-tap — the jot sheet opens over whatever you were doing, even from the lock screen.',
-      'how.s3.t': 'Amount, category, done', 'how.s3.p': 'Type the amount in any currency, tap a category, save. About three seconds, start to finish.',
-      'feat.title': 'Everything you need to know where it went.',
-      'feat.lede': 'No bank logins, no spreadsheets. Just your jots, turned into clear numbers.',
-      'feat.1.t': 'Three-second jots', 'feat.1.p': 'One sheet for amount, note and category. Your default account and category are already picked.',
-      'feat.2.t': 'Every currency', 'feat.2.p': "Jot in dram, dollars, euros or rubles. Totals convert to your main currency at that day's rate.",
-      'feat.3.t': 'Budgets that nudge', 'feat.3.p': "Set a monthly budget and per-category limits. See what's left per day, and which category ran over.",
-      'feat.4.t': 'Insights, not homework', 'feat.4.p': 'Income versus spending by month, what you kept, and plain-language notes on what changed.',
-      'feat.5.t': 'Private by default', 'feat.5.p': 'Your jots live on your iPhone and sync through your own iCloud. Lock the app with Face ID.',
-      'feat.6.t': 'Light and dark', 'feat.6.p': "Follows your iPhone's appearance, in English, Russian or Spanish.",
-      'screens.title': 'See where it <span class="lime-text">went.</span>',
-      'screens.lede': 'Activity, category split and monthly insights — all from the jots you already made.',
-      'price.kicker': 'Pricing', 'price.title': 'One plan. First month on us.',
-      'price.lede': 'Try everything free for a month. Keep going for less than one coffee — cancel anytime in your App Store settings.',
-      'price.badge': '1 month free', 'price.per': '/ month',
-      'price.f1': 'Unlimited jots and accounts', 'price.f2': 'Back Tap quick jot', 'price.f3': 'Multi-currency with daily rates',
-      'price.f4': 'Budgets, insights and CSV export', 'price.f5': 'iCloud sync across your devices',
-      'price.cta': 'Download app free',
-      'faq.title': 'Questions',
-      'faq.1.q': 'Does Jotly connect to my bank?', 'faq.1.a': 'No. You jot what you spend, so nothing needs your bank login. Automatic jots from Apple Wallet payments are coming soon.',
-      'faq.2.q': 'Where is my data stored?', 'faq.2.a': 'On your iPhone, synced through your own iCloud account. You can export everything to CSV at any time.',
-      'faq.3.q': 'Which currencies does it support?', 'faq.3.a': 'Jot in any currency. Pick a main currency for totals and budgets; each jot keeps its original amount and the rate from that day.',
-      'faq.4.q': 'Is there an Android version?', 'faq.4.a': 'Jotly is iPhone-only for now, in English, Russian and Spanish.',
-      'final.title': 'Your next coffee is a three-second jot.', 'final.cta': 'Get Jotly free',
-      'foot.privacy': 'Privacy', 'foot.terms': 'Terms', 'foot.contact': 'Contact',
-      'meta.title': 'Jotly — Quick Expense Tracker for iPhone'
-    },
-    ru: {
-      'nav.how': 'Как это работает', 'nav.features': 'Возможности', 'nav.pricing': 'Цена', 'nav.faq': 'Вопросы', 'nav.cta': 'Скачать',
-      'hero.badge': 'Учёт расходов для iPhone',
-      'hero.title': 'Куда уходят<br><mark>ваши деньги?</mark>',
-      'hero.lede': 'Jotly записывает расход примерно за три секунды — дважды коснитесь задней панели iPhone, введите сумму, выберите категорию. Драмы, доллары или евро — всё в одном месте.',
-      'hero.cta': 'Скачать бесплатно', 'hero.cta2': 'Как это работает',
-      'how.kicker': 'Как это работает', 'how.title': 'Быстрее, чем забыть.',
-      'how.s1.t': 'Включите Back Tap', 'how.s1.p': 'Минутная настройка в Jotly привязывает двойной тап по задней панели iPhone к новой записи.',
-      'how.s2.t': 'Тап на кассе', 'how.s2.p': 'Заплатили за кофе? Двойной тап — окно записи откроется поверх любого приложения, даже с экрана блокировки.',
-      'how.s3.t': 'Сумма, категория, готово', 'how.s3.p': 'Введите сумму в любой валюте, выберите категорию, сохраните. Около трёх секунд от начала до конца.',
-      'feat.title': 'Всё, чтобы знать, куда ушли деньги.',
-      'feat.lede': 'Без входа в банк и без таблиц. Только ваши записи, превращённые в понятные цифры.',
-      'feat.1.t': 'Запись за три секунды', 'feat.1.p': 'Одно окно для суммы, заметки и категории. Основной счёт и категория уже выбраны.',
-      'feat.2.t': 'Любая валюта', 'feat.2.p': 'Записывайте в драмах, долларах, евро или рублях. Итоги пересчитываются в основную валюту по курсу того дня.',
-      'feat.3.t': 'Бюджеты с подсказками', 'feat.3.p': 'Задайте месячный бюджет и лимиты по категориям. Видно, сколько осталось на день и какая категория вышла за лимит.',
-      'feat.4.t': 'Аналитика без усилий', 'feat.4.p': 'Доходы и расходы по месяцам, сколько удалось сохранить, и понятные заметки о том, что изменилось.',
-      'feat.5.t': 'Приватно по умолчанию', 'feat.5.p': 'Записи хранятся на вашем iPhone и синхронизируются через ваш iCloud. Приложение можно закрыть Face ID.',
-      'feat.6.t': 'Светлая и тёмная тема', 'feat.6.p': 'Следует оформлению iPhone, на английском, русском или испанском.',
-      'screens.title': 'Видно, куда <span class="lime-text">ушло.</span>',
-      'screens.lede': 'Активность, разбивка по категориям и аналитика по месяцам — всё из уже сделанных записей.',
-      'price.kicker': 'Цена', 'price.title': 'Один тариф. Первый месяц — бесплатно.',
-      'price.lede': 'Попробуйте всё бесплатно в течение месяца. Дальше — дешевле одной чашки кофе. Отменить можно в любой момент в настройках App Store.',
-      'price.badge': 'Месяц бесплатно', 'price.per': '/ месяц',
-      'price.f1': 'Безлимитные записи и счета', 'price.f2': 'Быстрая запись через Back Tap', 'price.f3': 'Мультивалютность с дневным курсом',
-      'price.f4': 'Бюджеты, аналитика и экспорт в CSV', 'price.f5': 'Синхронизация через iCloud',
-      'price.cta': 'Скачать бесплатно',
-      'faq.title': 'Вопросы',
-      'faq.1.q': 'Jotly подключается к моему банку?', 'faq.1.a': 'Нет. Вы сами записываете траты, поэтому вход в банк не нужен. Автоматические записи из платежей Apple Wallet скоро появятся.',
-      'faq.2.q': 'Где хранятся мои данные?', 'faq.2.a': 'На вашем iPhone, с синхронизацией через ваш аккаунт iCloud. Всё можно в любой момент выгрузить в CSV.',
-      'faq.3.q': 'Какие валюты поддерживаются?', 'faq.3.a': 'Любые. Выберите основную валюту для итогов и бюджетов; каждая запись сохраняет исходную сумму и курс того дня.',
-      'faq.4.q': 'Есть версия для Android?', 'faq.4.a': 'Пока Jotly только для iPhone, на английском, русском и испанском.',
-      'final.title': 'Следующий кофе — запись за три секунды.', 'final.cta': 'Попробовать Jotly',
-      'foot.privacy': 'Конфиденциальность', 'foot.terms': 'Условия', 'foot.contact': 'Контакты',
-      'meta.title': 'Jotly — быстрый учёт расходов для iPhone'
-    },
-    es: {
-      'nav.how': 'Cómo funciona', 'nav.features': 'Funciones', 'nav.pricing': 'Precio', 'nav.faq': 'Preguntas', 'nav.cta': 'Descargar',
-      'hero.badge': 'Control de gastos para iPhone',
-      'hero.title': 'Descubre a dónde<br>va <mark>tu dinero.</mark>',
-      'hero.lede': 'Jotly registra un gasto en unos tres segundos: toca dos veces la parte trasera de tu iPhone, escribe el importe y elige una categoría. Drams, dólares o euros, todo en un solo lugar.',
-      'hero.cta': 'Descargar gratis', 'hero.cta2': 'Cómo funciona',
-      'how.kicker': 'Cómo funciona', 'how.title': 'Más rápido que olvidarlo.',
-      'how.s1.t': 'Activa Tocar atrás', 'how.s1.p': 'Una configuración de un minuto en Jotly vincula un doble toque en la parte trasera de tu iPhone con una nueva anotación.',
-      'how.s2.t': 'Toca al pagar', 'how.s2.p': '¿Pagaste un café? Doble toque: la hoja de anotación se abre sobre lo que estés haciendo, incluso desde la pantalla bloqueada.',
-      'how.s3.t': 'Importe, categoría, listo', 'how.s3.p': 'Escribe el importe en cualquier moneda, toca una categoría y guarda. Unos tres segundos de principio a fin.',
-      'feat.title': 'Todo lo que necesitas para saber adónde fue tu dinero.',
-      'feat.lede': 'Sin acceso a tu banco ni hojas de cálculo. Solo tus anotaciones, convertidas en números claros.',
-      'feat.1.t': 'Anotaciones en tres segundos', 'feat.1.p': 'Una sola hoja para importe, nota y categoría. Tu cuenta y categoría habituales ya están elegidas.',
-      'feat.2.t': 'Cualquier moneda', 'feat.2.p': 'Anota en drams, dólares, euros o rublos. Los totales se convierten a tu moneda principal con el tipo de cambio de ese día.',
-      'feat.3.t': 'Presupuestos que avisan', 'feat.3.p': 'Fija un presupuesto mensual y límites por categoría. Mira cuánto te queda por día y qué categoría se pasó.',
-      'feat.4.t': 'Análisis sin esfuerzo', 'feat.4.p': 'Ingresos frente a gastos por mes, cuánto ahorraste y notas claras sobre qué cambió.',
-      'feat.5.t': 'Privado por defecto', 'feat.5.p': 'Tus anotaciones viven en tu iPhone y se sincronizan con tu propio iCloud. Bloquea la app con Face ID.',
-      'feat.6.t': 'Modo claro y oscuro', 'feat.6.p': 'Sigue la apariencia de tu iPhone, en inglés, ruso o español.',
-      'screens.title': 'Mira adónde <span class="lime-text">fue.</span>',
-      'screens.lede': 'Actividad, reparto por categorías y análisis mensual, todo a partir de lo que ya anotaste.',
-      'price.kicker': 'Precio', 'price.title': 'Un solo plan. El primer mes, gratis.',
-      'price.lede': 'Prueba todo gratis durante un mes. Después, por menos que un café. Cancela cuando quieras en los ajustes de App Store.',
-      'price.badge': '1 mes gratis', 'price.per': '/ mes',
-      'price.f1': 'Anotaciones y cuentas ilimitadas', 'price.f2': 'Anotación rápida con Tocar atrás', 'price.f3': 'Multimoneda con tipo de cambio diario',
-      'price.f4': 'Presupuestos, análisis y exportación a CSV', 'price.f5': 'Sincronización con iCloud entre tus dispositivos',
-      'price.cta': 'Descargar gratis',
-      'faq.title': 'Preguntas',
-      'faq.1.q': '¿Jotly se conecta a mi banco?', 'faq.1.a': 'No. Tú anotas lo que gastas, así que no hace falta acceder a tu banco. Pronto llegarán las anotaciones automáticas de pagos con Apple Wallet.',
-      'faq.2.q': '¿Dónde se guardan mis datos?', 'faq.2.a': 'En tu iPhone, sincronizados con tu propia cuenta de iCloud. Puedes exportarlo todo a CSV cuando quieras.',
-      'faq.3.q': '¿Qué monedas admite?', 'faq.3.a': 'Cualquiera. Elige una moneda principal para totales y presupuestos; cada anotación conserva su importe original y el tipo de cambio de ese día.',
-      'faq.4.q': '¿Hay versión para Android?', 'faq.4.a': 'Por ahora Jotly es solo para iPhone, en inglés, ruso y español.',
-      'final.title': 'Tu próximo café es una anotación de tres segundos.', 'final.cta': 'Prueba Jotly gratis',
-      'foot.privacy': 'Privacidad', 'foot.terms': 'Términos', 'foot.contact': 'Contacto',
-      'meta.title': 'Jotly — control de gastos rápido para iPhone'
-    }
-  };
-
-  function storeGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
-  function storeSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
-
-  function setLang(lang) {
-    var dict = T[lang] || T.en;
-    document.documentElement.lang = lang;
-    document.title = dict['meta.title'];
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      var v = dict[el.getAttribute('data-i18n')];
-      if (v != null) el.textContent = v;
+  /* ───────── Language links ─────────
+     Each language is its own page (/, /ru/, /es/, /hy/), built by tools/build_i18n.py.
+     When the site is opened straight from disk (file://), folders don't open their
+     index.html by themselves, so point the links at it. */
+  if (location.protocol === 'file:') {
+    document.querySelectorAll('.lang a').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (/\/$/.test(href)) a.setAttribute('href', href + 'index.html');
     });
-    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
-      var v = dict[el.getAttribute('data-i18n-html')];
-      if (v != null) el.innerHTML = v;
-    });
-    document.querySelectorAll('.lang button').forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));
-    });
-    storeSet('jotly-lang', lang);
   }
-
-  document.querySelectorAll('.lang button').forEach(function (b) {
-    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
-  });
-  var saved = storeGet('jotly-lang');
-  var browser = (navigator.language || '').toLowerCase().slice(0, 2);
-  var initial = (saved && T[saved]) ? saved : (T[browser] ? browser : 'en');
-  if (initial !== 'en') setLang(initial);
 
   /* ───────── Helpers ───────── */
   function h(tag, cls, html) {
