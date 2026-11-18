@@ -16,7 +16,7 @@ favicon.ico     browser tab icon (16/32/48)
 icons/          tab icons, Apple touch icon, 192/512 icons, og-image.png (link previews)
 site.webmanifest
 _headers        Netlify response headers (serves sitemap.xml as XML)
-robots.txt / sitemap.xml   for search engines
+robots.txt / sitemap.xml   for search engines (sitemap.xsl makes the sitemap readable in a browser)
 ```
 
 ## Run locally
