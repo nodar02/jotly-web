@@ -17,7 +17,7 @@ icons/          tab icons, Apple touch icon, 192/512 icons, og-image.png (link p
 site.webmanifest
 _headers        Netlify response headers (serves sitemap.xml as XML)
 BingSiteAuth.xml  Bing Webmaster Tools ownership file (keep)
-robots.txt / sitemap.xml   for search engines (sitemap.xsl makes the sitemap readable in a browser)
+robots.txt / sitemap.xml   for search engines
 ```
 
 ## Run locally
