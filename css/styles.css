@@ -370,3 +370,26 @@ html[lang="hy"] { --display: 'Bricolage Grotesque', 'Noto Sans Armenian', system
 .c-link:hover { outline: 1.5px solid var(--ink); outline-offset: -1.5px; }
 .page-body-tight { gap: 24px; }
 [hidden] { display: none !important; }
+
+/* ───────── Small screens ───────── */
+h1, h2, h3 { overflow-wrap: break-word; }
+@media (max-width: 760px) {
+  /* Home header: logo + language switch on one row; the hero's own download button is right below. */
+  .site-header { flex-wrap: nowrap; padding-top: 18px; padding-bottom: 18px; }
+  .header-actions .btn-sm { display: none; }
+  /* Inner pages: logo + Get the app on top, page links on their own row. */
+  .page-nav { order: 3; width: 100%; gap: 6px 22px; }
+  .site-header:has(.page-nav) { flex-wrap: wrap; }
+}
+@media (max-width: 480px) {
+  .price-num { font-size: 56px; }
+  .price { flex-wrap: wrap; }
+  .final-cta { padding: 32px 24px; border-radius: 32px; }
+  .final-cta h2 { font-size: clamp(28px, 8.4vw, 40px); }
+  .final-cta .btn-xl { white-space: normal; height: auto; min-height: 58px; padding: 14px 24px; text-align: center; }
+}
+@media (max-width: 370px) {
+  /* The hero phone is drawn at 322px wide; shrink it to fit the narrowest phones. */
+  .phone-lg { zoom: 0.84; }
+  .lang a { min-width: 34px; padding: 0 6px; }
+}
